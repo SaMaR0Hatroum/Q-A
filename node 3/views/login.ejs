@@ -1,0 +1,37 @@
+<%- include ('./header')%>
+
+    <%- include('./navBar') %>
+        
+        <div class="log">
+            <form class="form_acounnt" method="POST" action="/login" class="log_form">
+                <h1>Log In</h1>
+  
+                <div class="mb-3">
+                    <label class="labels" for="userEmail1" class="form-label">Email address</label>
+                    <input name="email" type="email" class="form-control" id="userEmail1" aria-describedby="emailHelp">
+                    <!-- <small class="form-text warning userName" class="Warning">Warning</small> -->
+                </div>
+                
+                <div class="mb-3">
+                    <label class="labels" for="userPassword" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="userPassword" id="New_password">
+                    <!-- <small class="form-text warning userName" class="Warning">Warning</small> -->
+                </div>
+                <div id="Log_In">
+                    <button type="submit" class="btn btn-primary" >Log In</button>
+                    <a href="/signup" type="submit" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+            </form>
+
+        </div>
+
+    
+
+
+
+        <%- include('./Footer') %>
+  
+
+
+   

@@ -1,0 +1,53 @@
+.form_acounnt{
+    height: 560px;
+    width: 400px; 
+    margin: auto;
+    background-color:#000;
+       color:rgb(240, 113, 54);
+     margin-top: 20px;
+}
+
+.labels{
+     font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: #333;
+    height: 20px;
+    width: 98px;
+    margin-top: 10px;
+    color: rgb(240, 113, 54);
+     margin-top: 20px;
+}
+h3{
+     margin-left: 150px;
+     margin-top: 7px;
+      color:rgb(240, 113, 54);
+}
+
+#Email,#re_Email,#New_password,#User_Name{
+ height: 30px;
+    width: 250px;
+    border: 1px  #3a5a9a solid ;
+    margin-top: 7px;
+    
+}
+/* #Sing_up{
+     
+     margin-left: 180px;
+     margin-top: 7px;
+     background-color: #fff;
+     color: #000;
+} */
+#Log_In{
+    display: flex;
+    justify-content: space-between;
+     margin: 120px;
+     margin-top: 7px;
+     
+     color: #000;
+}
+.Text{
+         margin: 120px;
+     margin-top: 7px;
+     
+    color: red;
+}

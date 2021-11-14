@@ -1,0 +1,40 @@
+    
+    <%- include ('./header')%>
+
+     <%- include('./navBar') %>
+
+     
+
+<form method="POSt" action="/edit/<%= result.id %>" class="form" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input  type="text" class="form-control" id="exampleFormControlInput1" name="title" value="<%= result.title %>">
+        <div>
+            <% if(errors && errors.title) { %>
+                <span class="Warning">
+                    <%=errors.title%>
+                </span>
+                <% } %>
+        </div>
+    </div>
+   
+
+    
+  
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" >Q</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="Question" value="<%= result.Question %>" >
+        <div>
+            <% if(errors && errors.Question) { %>
+                <span class="Warning">
+                    <%=errors.Question%>
+                </span>
+                <% } %>
+        </div>
+    </div>
+      
+    <button type="submit" name="Send"> Send </button>
+</form>
+
+
+<%- include('./Footer') %>

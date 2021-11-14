@@ -1,0 +1,53 @@
+
+
+     <%- include ('./header')%>
+
+    <%- include('./navBar') %>
+  
+   
+          <% if (QArr.length> 0) { %>
+               <%QArr.forEach((Question)=>{ %>
+                    <div class="card" style="width: 18rem;">
+                         <div class="card-body">
+          
+                              <a class="See" href="/showarticle/<%=Question.id %>"> See more</a>
+                              <h5 class="card-title">
+                                   <%=Question.title%>
+                              </h5>
+                              
+          
+                              <p class="card-text">
+                                   <%=Question.Question%>
+                              </p>
+
+                             
+                              
+                              <p class="card-title">
+                                   <%= Question.createdAt.toLocaleDateString() %>
+                              </p>
+                         </div>
+                    </div>
+                    <a href="/login" class="btn btn-success">Add New Question </a>
+                  
+          
+                    <% }) %>
+          
+                         <% } else { %>
+                              <h5> No More Quotationes To Display</h5>
+                              <% } %>  
+
+
+
+                
+
+           
+
+
+                           
+   
+
+  
+<%- include('./Footer') %>
+    
+
+

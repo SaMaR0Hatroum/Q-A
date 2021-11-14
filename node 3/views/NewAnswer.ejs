@@ -1,0 +1,23 @@
+    
+    <%- include ('./header')%>
+
+     <%- include('./navBar') %>
+
+    <form method="POST" action="/NewAnswer" class="form">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">answer</label>
+            <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="answer">
+            <div>
+                <% if(errors && errors.answer) { %>
+                    <span class="Warning">
+                        <%=errors.answer%>
+                    </span>
+                    <% } %>
+            </div>
+        </div>
+    
+        <button type="submit" name="Send"> Send</button>
+
+
+<%- include('./Footer') %>
+

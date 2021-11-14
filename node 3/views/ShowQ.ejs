@@ -1,0 +1,62 @@
+
+
+     <%- include ('./header')%>
+
+    <%- include('./navBar') %>
+     <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><%=Question.title%></h5>
+        <p class="card-text"><%=Question.id%></p>
+        <p class="card-text"><%=Question.Question%></p>
+        <p class="card-text"><%=Question.answers%></p>
+        <a  class="btn btn-primary" href="/edit/<%=Question.id%>" >Edit</a>
+        <a  class="btn btn-light"   href="/Delete/<%=Question.id%>">Delete</a> 
+        <!-- <a  class="btn btn-light"   href="/NewAnswer">Add answer</a>  -->
+    </div>
+    </div>
+<hr>
+
+<!-- <form method="POST" action="/ShowQ" class="form"> -->
+    <div>
+         <input type="text" id="item" />
+        <button id="addline" class="btn btn-primary btn-sm">create an answer</button>
+         <p id="parent"></p>
+    </div>
+
+
+
+
+
+  <script>
+      const addline = document.getElementById('addline');
+      const item = document.getElementById('item');
+      addline.addEventListener('click',addlistitem);
+     function addlistitem (){
+        const parent = document.getElementById('parent');
+        const child = document.createElement('p');
+        const text = document.createTextNode(item.value);
+        child.appendChild(text);
+        parent.appendChild(child);
+        const data = {
+            answer: text,
+            question: "<%=Question.id%>",
+        }
+        console.log('data that we are sending', data);
+        fetch("/NewAnswer", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify(data)
+            }).then(res => {
+                console.log("Request complete! response:", res);
+            });
+     };
+  </script>  
+
+
+    
+
+<%- include('./Footer') %>
+
+
+
+

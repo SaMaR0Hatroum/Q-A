@@ -1,0 +1,35 @@
+
+
+     <%- include ('./header')%>
+
+    <%- include('./navBar') %>
+
+
+    <div> <% if (answerArr.length> 0) { %>
+          <%answerArr.forEach((Question)=>{ %>
+               <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+     
+                         <p class="card-text">
+                              <%=Question.answer%>
+                         </p>
+     
+                         <p class="card-title">
+                              <%= Question.createdAt.toLocaleDateString() %>
+                         </p>
+                    </div>
+               </div>
+              
+     
+               <% }) %>
+     
+                    <% } else { %>
+                         <h5> No More Answer To Display</h5>
+                         <% } %> 
+                         
+</div>
+
+<%- include('./Footer') %>
+    
+
+

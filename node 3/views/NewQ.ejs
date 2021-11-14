@@ -1,0 +1,34 @@
+    
+    <%- include ('./header')%>
+
+     <%- include('./navBar') %>
+
+     <form method="POST" action="/NewQ" class="form">
+        <div class="mb-2" >
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title"> 
+            <div>
+                <% if(errors && errors.title) { %>
+                <span class="Warning"><%=errors.title%></span>
+                <% } %>
+            </div>
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label" >Quotation</label>
+            <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="Question">
+            <div>
+                <% if(errors && errors.Question) { %>
+                <span class="Warning"><%=errors.Question%></span>
+            <% } %>
+            </div>
+        </div>
+            
+    <button type="submit"  name="Send"> Send</button>
+   
+</form>
+
+
+<%- include('./Footer') %>
+

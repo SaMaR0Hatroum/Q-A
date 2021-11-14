@@ -1,0 +1,11 @@
+.Warning{
+    background-color:rgb(255, 0, 0);
+    color: rgb(252, 248, 248);
+    margin-left: 20px;
+    margin-bottom:15px;
+}
+.See{
+    display: flex;
+   justify-content:right;
+   
+}
